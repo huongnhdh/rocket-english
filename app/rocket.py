@@ -3,7 +3,7 @@ import json
 import random
 import os
 import sys
-
+from app.utils import get_dir_root
 # class Aword:
 #     # Initializer / Instance Attributes
 #     def __init__(self, word, know_point=0, example="", noted="", ipa=""):
@@ -29,14 +29,17 @@ def _load_json_file(path_file_json):
     with open(path_file_json) as f:
         jsondata = json.load(f)
     return jsondata
+
 def load_training_data():
-    return _load_json_file('3000words.json')
-def load_process_data():
-    return _load_json_file('process_3000words.json')
+    return _load_json_file(os.path.join(get_dir_root(),'data', '3000words.json' ))
+
+def load_process_data(process_path_data):
+    return _load_json_file(process_path_data)
 
 def main():
+    process_path_data = os.path.join(get_dir_root(),'data', 'process_3000words.json' )
     wordsdata = load_training_data()
-    processdata = load_process_data()
+    processdata = load_process_data(process_path_data)
     if not processdata:
         print("Initialize the process data....")
         processdata = [{"word": w['word'], "know_point": 0, "example": "", "noted": "", "ipa": ""} for w in wordsdata]
@@ -77,12 +80,12 @@ def main():
                     break
                 break
         print("Ya You're finish challenge!")
-        with open('process_3000words.json','w', encoding='utf-8') as json_f:
+        with open(process_path_data,'w', encoding='utf-8') as json_f:
             json.dump(processdata,json_f, ensure_ascii=False, indent=2)
         sys.exit()
     except KeyboardInterrupt:
         print("\nGood bye!")
-        with open('process_3000words.json','w', encoding='utf-8') as json_f:
+        with open(process_path_data,'w', encoding='utf-8') as json_f:
             json.dump(processdata,json_f, ensure_ascii=False, indent=2)
         sys.exit()
 if __name__ == '__main__':

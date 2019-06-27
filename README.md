@@ -1,10 +1,10 @@
-# rocket-english
-terminal pakage for learing vocabulary
+# rocket-vocab
+terminal package for learning vocabulary
 
 ## TODO://
 
-0. Interation with firebase
-1. Make pakage on pypi
-2. Classify by know-point 
+0. Intergation with FireBase
+1.  ~~Make package on Pypi~~
+2. Classify by know-point
 3. Random by classify
-4. More color with TrueColor
+4. More color with `TrueColor`
