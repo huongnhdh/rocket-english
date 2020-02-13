@@ -6,7 +6,7 @@ import os
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 setup(
     name='rocket-vocab',
-    version='0.0.4',
+    version='0.0.4.1',
     packages=find_packages(
         '.',
         exclude=[
@@ -20,7 +20,7 @@ setup(
     author='huongnhd',
     author_email = 'huong.nhdh@gmail.com',
     url = 'https://github.com/huongnhdh/rocket-vocab',
-    download_url = 'https://github.com/huongnhdh/rocket-vocab/archive/v004.tar.gz',
+    download_url = 'https://github.com/huongnhdh/rocket-vocab/archive/v004.1.tar.gz',
     keywords = ['vocab', 'terminal', 'true color'],
     install_requires=[
     ],
