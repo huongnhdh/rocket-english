@@ -4,3 +4,4 @@
 rocket_vocab.egg-info/*
 build
 dist
+src/rocket_vocab/data
