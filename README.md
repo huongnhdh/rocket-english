@@ -10,6 +10,12 @@ terminal package for learning vocabulary
 4. More color with `TrueColor`
 
 ## Install 
+1. Via pip3
+```
+pip3 install rocket-vocab
+```
+
+2. Manual
 ```
 git@github.com:huongnhdh/rocket-vocab.git
 cd rocket-vocab
@@ -44,4 +50,17 @@ https://www.google.com/search?q=screen+l%C3%A0+g%C3%AC
 
 Ya You're finish challenge!
 user-> 
+```
+
+## Problems
+
+1. WARNING: The script rocket is installed in '/home/${USERNAME}/.local/bin' which is not on PATH.
+
+
+```
+#Please append  $HOME/.local/bin to $PATH var by 
+echo 'export $PATH=$HOME/.local/bin:$PATH' >> ~/profile
+
+#then 
+exec $SHELL
 ```
