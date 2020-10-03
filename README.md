@@ -14,7 +14,8 @@ cd rocket-vocab
 python3 setup.py install
 ```
 
-3. Some when install problems.
+3. Some when install problems
+
 3.1) If has error is  `WARNING: The script rocket is installed in '/home/${USERNAME}/.local/bin' which is not on PATH.`
 
 
